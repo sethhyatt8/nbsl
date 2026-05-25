@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom'
+import { PowerRankingList } from '../components/PowerRankingList'
 import { TeamBadge } from '../components/TeamBadge'
+import { lastYearFinishOrder, mostUsefulWebsiteOrder } from '../data/rankings'
 import { redDivisionTeams } from '../data/teams'
 import './Home.css'
 
@@ -33,7 +35,7 @@ export function Home() {
 
       <section className="home__teams" aria-labelledby="teams-heading">
         <h2 id="teams-heading" className="section-title">
-          The five teams
+          Power Rankings
         </h2>
         <ul className="home__team-grid">
           {redDivisionTeams.map((team) => (
@@ -44,6 +46,14 @@ export function Home() {
             </li>
           ))}
         </ul>
+
+        <div className="home__rankings">
+          <PowerRankingList title="Last Year's Finish" teamIds={lastYearFinishOrder} />
+          <PowerRankingList
+            title="Most Useful Team Website"
+            teamIds={mostUsefulWebsiteOrder}
+          />
+        </div>
       </section>
 
       <section className="home__stories" aria-labelledby="news-heading">
@@ -60,15 +70,6 @@ export function Home() {
           ))}
         </ul>
       </section>
-
-      <aside className="home__note">
-        <h3>2025 season snapshot</h3>
-        <p>
-          Crestview&apos;s team site lists <strong>3× NBSL champions (2022–2024)</strong>{' '}
-          with undefeated dual seasons. League-wide 2025 champs aren&apos;t posted clearly
-          on nbslswim.com — we&apos;ll add verified scores when we have them.
-        </p>
-      </aside>
     </div>
   )
 }

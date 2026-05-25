@@ -25,11 +25,18 @@
 
 .home__team-grid {
   list-style: none;
-  margin: 0 0 2.5rem;
+  margin: 0 0 1.5rem;
   padding: 0;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   gap: 1rem;
+}
+
+.home__rankings {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 2.5rem;
 }
 
 .home__team-card {
@@ -76,21 +83,3 @@
   color: var(--muted);
 }
 
-.home__note {
-  margin-top: 2rem;
-  padding: 1.25rem 1.5rem;
-  border-radius: 1rem;
-  background: color-mix(in srgb, var(--accent) 12%, var(--card));
-  border-left: 4px solid var(--accent);
-}
-
-.home__note h3 {
-  margin: 0 0 0.5rem;
-  font-size: 1rem;
-}
-
-.home__note p {
-  margin: 0;
-  font-size: 0.9rem;
-  color: var(--muted);
-}
