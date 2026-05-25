@@ -4,15 +4,17 @@ Unofficial newsletter for the NBSL Red Division (Fair Blue, Graylyn Crest, Silve
 
 ## Live site
 
-https://sethhyatt8.github.io/NBSL/ (no `#` in the URL — use this exact link on your phone)
+https://sethhyatt8.github.io/nbsl/
 
-## GitHub Pages setup (do this once)
+**Important:** The GitHub repo must be named **`nbsl`** (all lowercase). Browsers and phones often force lowercase URLs; a repo named `NBSL` will 404 at `/nbsl/`.
 
-1. **Settings → Pages**
-2. **Build and deployment → Source:** **Deploy from a branch**
-3. **Branch:** `gh-pages` · **Folder:** `/ (root)` · Save
+### One-time repo rename (if the site 404s)
 
-Pushes to `main` run the deploy workflow, which updates the `gh-pages` branch.
+1. GitHub → **sethhyatt8/NBSL** → **Settings** → **General**
+2. **Repository name** → change to `nbsl` → **Rename**
+3. **Settings → Pages** → Source: **Deploy from a branch** → `gh-pages` / **(root)**
+
+Pushes to `main` update the `gh-pages` branch automatically.
 
 ## Local dev
 
@@ -21,7 +23,7 @@ npm install
 npm run dev
 ```
 
-Open http://localhost:5173/ (Vite dev server; no `/NBSL` prefix locally).
+Open http://localhost:5173/nbsl/
 
 ## Manual deploy
 
