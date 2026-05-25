@@ -1,12 +1,14 @@
-import { HashRouter, Navigate, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
 import { Layout } from './components/Layout'
 import { Home } from './pages/Home'
 import { Teams } from './pages/Teams'
 import { Times } from './pages/Times'
 
+const basename = import.meta.env.BASE_URL.replace(/\/$/, '') || '/'
+
 function App() {
   return (
-    <HashRouter>
+    <BrowserRouter basename={basename === '/' ? undefined : basename}>
       <Routes>
         <Route element={<Layout />}>
           <Route index element={<Home />} />
@@ -15,7 +17,7 @@ function App() {
           <Route path="*" element={<Navigate to="/" replace />} />
         </Route>
       </Routes>
-    </HashRouter>
+    </BrowserRouter>
   )
 }
 

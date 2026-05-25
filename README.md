@@ -4,7 +4,7 @@ Unofficial newsletter for the NBSL Red Division (Fair Blue, Graylyn Crest, Silve
 
 ## Live site
 
-https://sethhyatt8.github.io/NBSL/
+https://sethhyatt8.github.io/NBSL/ (no `#` in the URL — use this exact link on your phone)
 
 ## GitHub Pages setup (do this once)
 
