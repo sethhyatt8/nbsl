@@ -8,10 +8,10 @@ import './Home.css'
 const sampleStories = [
   {
     id: 'silverside-pickleball',
-    title: 'Pickleball at Silverside',
+    title: 'Pickleball at Silverside?',
     date: 'May 2026',
     excerpt:
-      'The deck beside the pool is louder than usual — Silverside has leaned into pickleball, and swim families are learning to share the noise, the courts, and the parking lot with a whole new crowd.',
+      "If there is any sport better than summer swimming, it's pickleball. But are any of these soft Silverside suburbians any good? Probably not — challenge incoming…",
   },
   {
     id: 'welcome',
