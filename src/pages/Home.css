@@ -23,31 +23,14 @@
   color: var(--accent);
 }
 
-.home__team-grid {
-  list-style: none;
-  margin: 0 0 1.5rem;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  gap: 1rem;
+.home__rankings-section {
+  margin-bottom: 2.5rem;
 }
 
 .home__rankings {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.25rem;
-  margin-bottom: 2.5rem;
-}
-
-.home__team-card {
-  display: block;
-  text-decoration: none;
-  color: inherit;
-  transition: transform 0.15s ease;
-}
-
-.home__team-card:hover {
-  transform: translateY(-3px);
 }
 
 .home__story-list {

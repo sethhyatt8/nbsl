@@ -1,8 +1,8 @@
-import { Link } from 'react-router-dom'
 import { PowerRankingList } from '../components/PowerRankingList'
-import { TeamBadge } from '../components/TeamBadge'
-import { lastYearFinishOrder, mostUsefulWebsiteOrder } from '../data/rankings'
-import { redDivisionTeams } from '../data/teams'
+import {
+  lastYearFinishRanking,
+  mostUsefulWebsiteRanking,
+} from '../data/rankings'
 import './Home.css'
 
 const sampleStories = [
@@ -33,25 +33,15 @@ export function Home() {
         </p>
       </section>
 
-      <section className="home__teams" aria-labelledby="teams-heading">
+      <section className="home__rankings-section" aria-labelledby="teams-heading">
         <h2 id="teams-heading" className="section-title">
           Power Rankings
         </h2>
-        <ul className="home__team-grid">
-          {redDivisionTeams.map((team) => (
-            <li key={team.id}>
-              <Link to={`/teams#${team.id}`} className="home__team-card">
-                <TeamBadge team={team} size="lg" />
-              </Link>
-            </li>
-          ))}
-        </ul>
-
         <div className="home__rankings">
-          <PowerRankingList title="Last Year's Finish" teamIds={lastYearFinishOrder} />
+          <PowerRankingList title="Last Year's Finish" entries={lastYearFinishRanking} />
           <PowerRankingList
             title="Most Useful Team Website"
-            teamIds={mostUsefulWebsiteOrder}
+            entries={mostUsefulWebsiteRanking}
           />
         </div>
       </section>
