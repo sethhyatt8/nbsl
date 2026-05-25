@@ -1,41 +1,32 @@
 # Red Division — NBSL
 
-Unofficial newsletter and results hub for the **North Brandywine Swim League** Red Division:
-
-Fair Blue, Graylyn Crest, Silverside, Lane, and Crestview.
+Unofficial newsletter for the NBSL Red Division (Fair Blue, Graylyn Crest, Silverside, Lane, Crestview).
 
 ## Live site
 
 https://sethhyatt8.github.io/NBSL/
 
-Deploys automatically when `main` is pushed (GitHub Actions → Pages).
+## GitHub Pages setup (do this once)
 
-## Local development
+1. **Settings → Pages**
+2. **Build and deployment → Source:** **Deploy from a branch**
+3. **Branch:** `gh-pages` · **Folder:** `/ (root)` · Save
+
+Pushes to `main` run the deploy workflow, which updates the `gh-pages` branch.
+
+## Local dev
 
 ```bash
 npm install
 npm run dev
 ```
 
-Open the URL Vite prints (usually http://localhost:5173/NBSL/).
+Open http://localhost:5173/ (Vite dev server; no `/NBSL` prefix locally).
 
-## Build
-
-```bash
-npm run build
-npm run preview
-```
-
-`vite.config.ts` sets `base: '/NBSL/'` for this GitHub Pages project site.
-
-## Manual deploy (optional)
+## Manual deploy
 
 ```bash
 npm run deploy
 ```
 
-Uses `gh-pages` to publish `dist/` if you prefer that over Actions.
-
-## Data (later)
-
-Meet results will import from Swimmingly `.sd3` exports or manual entry into `public/data/`.
+Same as CI: builds `dist/` and pushes to `gh-pages`.
