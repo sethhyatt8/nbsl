@@ -1,0 +1,96 @@
+.home__hero {
+  margin-bottom: 2.5rem;
+}
+
+.home__headline {
+  margin: 0 0 0.5rem;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  line-height: 1.2;
+}
+
+.home__lede {
+  margin: 0;
+  max-width: 42rem;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.section-title {
+  margin: 0 0 1rem;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+}
+
+.home__team-grid {
+  list-style: none;
+  margin: 0 0 2.5rem;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.home__team-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.15s ease;
+}
+
+.home__team-card:hover {
+  transform: translateY(-3px);
+}
+
+.home__story-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.home__story {
+  padding: 1.25rem 1.5rem;
+  border-radius: 1rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+}
+
+.home__story-date {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin-bottom: 0.35rem;
+}
+
+.home__story h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.15rem;
+}
+
+.home__story p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.home__note {
+  margin-top: 2rem;
+  padding: 1.25rem 1.5rem;
+  border-radius: 1rem;
+  background: color-mix(in srgb, var(--accent) 12%, var(--card));
+  border-left: 4px solid var(--accent);
+}
+
+.home__note h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+}
+
+.home__note p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--muted);
+}

@@ -1,59 +1,41 @@
-# Cursor Web App Template
+# Red Division — NBSL
 
-Starter template for static web apps deployed to GitHub Pages with:
+Unofficial newsletter and results hub for the **North Brandywine Swim League** Red Division:
 
-- React
-- Vite
-- TypeScript
-- ESLint
-- `gh-pages` deployment script
-- GitHub Actions Pages deployment workflow
+Fair Blue, Graylyn Crest, Silverside, Lane, and Crestview.
 
-## Quick start (for a new app)
+## Live site
 
-1. Clone this template repository.
-2. Rename the folder/repository for your app.
-3. Install dependencies:
+https://sethhyatt8.github.io/NBSL/
+
+Deploys automatically when `main` is pushed (GitHub Actions → Pages).
+
+## Local development
 
 ```bash
 npm install
-```
-
-4. Start development:
-
-```bash
 npm run dev
 ```
 
-## Deploy to GitHub Pages
+Open the URL Vite prints (usually http://localhost:5173/NBSL/).
 
-This template includes:
+## Build
 
-- `predeploy`: `npm run build`
-- `deploy`: `gh-pages -d dist`
+```bash
+npm run build
+npm run preview
+```
 
-To deploy:
+`vite.config.ts` sets `base: '/NBSL/'` for this GitHub Pages project site.
+
+## Manual deploy (optional)
 
 ```bash
 npm run deploy
 ```
 
-`vite.config.ts` uses `base: './'` so the built app remains portable for GitHub Pages project hosting.
+Uses `gh-pages` to publish `dist/` if you prefer that over Actions.
 
-For automatic deploys, this template also includes `.github/workflows/deploy-pages.yml`, which publishes on pushes to `main`.
+## Data (later)
 
-## One-time Cursor setup (important)
-
-Repository rules can guide agent behavior, but frequent run-approval prompts are controlled by your Cursor permissions mode.
-
-In Cursor:
-
-1. Open Agent settings and set approval mode to `allowlist` (or a less strict mode you are comfortable with).
-2. Expand your allowlist to include normal dev commands (for example: `npm install`, `npm run *`, `npx vite`, `git status`, `git diff`, `git log`).
-3. Keep destructive commands requiring approval (for example: `rm -rf`, `git reset --hard`, force pushes).
-
-After this one-time setup, cloned repos using this template should run with far fewer interruptions.
-
-## Template intent
-
-This repo is intentionally minimal and cloneable so you can quickly start new apps (for example, a darts scoring app) while keeping consistent tooling and agent behavior defaults.
+Meet results will import from Swimmingly `.sd3` exports or manual entry into `public/data/`.

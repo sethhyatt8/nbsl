@@ -1,0 +1,57 @@
+.team-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.65rem 1rem;
+  border-radius: 1rem;
+  background: linear-gradient(135deg, var(--team-primary), color-mix(in srgb, var(--team-primary) 70%, #000));
+  color: #fff;
+  box-shadow: 0 4px 14px color-mix(in srgb, var(--team-primary) 35%, transparent);
+}
+
+.team-badge__glyph {
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  background: var(--team-accent);
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.team-badge--sm .team-badge__glyph {
+  width: 2rem;
+  height: 2rem;
+  font-size: 1.1rem;
+}
+
+.team-badge--lg .team-badge__glyph {
+  width: 3.5rem;
+  height: 3.5rem;
+  font-size: 2rem;
+}
+
+.team-badge__text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.team-badge__name {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.team-badge__mascot {
+  font-size: 0.75rem;
+  opacity: 0.9;
+}
+
+.team-badge--sm .team-badge__name {
+  font-size: 0.85rem;
+}
+
+.team-badge--lg .team-badge__name {
+  font-size: 1.15rem;
+}

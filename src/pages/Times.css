@@ -1,0 +1,31 @@
+.times-page h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.75rem;
+}
+
+.times-page__lede {
+  margin: 0 0 1.5rem;
+  max-width: 36rem;
+  color: var(--muted);
+}
+
+.times-page__placeholder {
+  padding: 3rem 2rem;
+  text-align: center;
+  border-radius: 1.25rem;
+  border: 2px dashed var(--border);
+  background: var(--card);
+}
+
+.times-page__placeholder p {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.times-page__hint {
+  margin-top: 0.5rem !important;
+  font-size: 0.9rem !important;
+  font-weight: 400 !important;
+  color: var(--muted);
+}
