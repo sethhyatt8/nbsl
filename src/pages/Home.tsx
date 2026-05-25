@@ -7,6 +7,13 @@ import './Home.css'
 
 const sampleStories = [
   {
+    id: 'silverside-pickleball',
+    title: 'Pickleball at Silverside',
+    date: 'May 2026',
+    excerpt:
+      'The deck beside the pool is louder than usual — Silverside has leaned into pickleball, and swim families are learning to share the noise, the courts, and the parking lot with a whole new crowd.',
+  },
+  {
     id: 'welcome',
     title: 'Welcome to Red Division',
     date: 'May 2026',

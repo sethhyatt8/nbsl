@@ -19,12 +19,7 @@ export function PowerRankingList({ title, entries }: PowerRankingListProps) {
           return (
             <li key={entry.teamId} className="power-ranking__row">
               <span className="power-ranking__rank">{index + 1}</span>
-              <div className="power-ranking__body">
-                <TeamBadge team={team} size="sm" />
-                {entry.comment && (
-                  <p className="power-ranking__comment">{entry.comment}</p>
-                )}
-              </div>
+              <TeamBadge team={team} size="sm" comment={entry.comment} />
             </li>
           )
         })}

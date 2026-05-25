@@ -6,12 +6,18 @@ type TeamBadgeProps = {
   team: RedDivisionTeam
   size?: 'sm' | 'md' | 'lg'
   showName?: boolean
+  comment?: string
 }
 
-export function TeamBadge({ team, size = 'md', showName = true }: TeamBadgeProps) {
+export function TeamBadge({
+  team,
+  size = 'md',
+  showName = true,
+  comment,
+}: TeamBadgeProps) {
   return (
     <div
-      className={`team-badge team-badge--${size}`}
+      className={`team-badge team-badge--${size}${comment ? ' team-badge--has-comment' : ''}`}
       style={
         {
           '--team-primary': team.primary,
@@ -26,6 +32,7 @@ export function TeamBadge({ team, size = 'md', showName = true }: TeamBadgeProps
         <div className="team-badge__text">
           <span className="team-badge__name">{team.name}</span>
           <span className="team-badge__mascot">{team.mascot}</span>
+          {comment && <p className="team-badge__comment">{comment}</p>}
         </div>
       )}
     </div>
